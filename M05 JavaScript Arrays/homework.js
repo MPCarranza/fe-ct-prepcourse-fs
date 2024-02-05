@@ -126,8 +126,13 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
-   let numComoString = num.toString();
-   return numComoString[0] === '9';
+ //  let numComoString = num.toString();
+   //return numComoString[0] === '9';
+   let EsNueve = num.toString() 
+   if (EsNueve[0] === '9') {
+      return (true);
+ }
+
 }
 
 function todosIguales(array) {
@@ -197,7 +202,7 @@ function breakStatement(num) {
    // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
-   // Tu código:
+   // Tu código: 
 }
 
 function continueStatement(num) {
