@@ -1,4 +1,4 @@
-/*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
+// /*⚠️ NO MODIFIQUES EL NOMBRE DE LAS DECLARACIONES ⚠️*/
 
 function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
@@ -24,7 +24,6 @@ function incrementarPorUno(array) {
    // Tu código:
    var incrementarPorUno = array.map ((num) => {return num + 1});
    return (incrementarPorUno);
-
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -128,10 +127,11 @@ function empiezaConNueve(num) {
    // Tu código:
  //  let numComoString = num.toString();
    //return numComoString[0] === '9';
-   let EsNueve = num.toString() 
-   if (EsNueve[0] === '9') {
-      return (true);
- }
+   if (num.toString()[0] === '9') {
+      return true;
+  } else {
+      return false;
+  }
 
 }
 
@@ -203,7 +203,18 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código: 
-}
+      var nuevosValores =[];
+      for (let i = 0; i < 10 ; i++) {
+         nuevosValores.push(num +=2); {
+         if (num === i)
+          {break}
+      }
+   }
+      if (nuevosValores.length < 10) {
+         return "Se interrumpió la ejecución"
+      }
+       return nuevosValores;  
+   }
 
 function continueStatement(num) {
    // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
@@ -212,7 +223,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
-}
+      let unArray = [];                 //Declaraste un array vacío unArray donde almacenar los nuevos valores.
+      for (i = 0; i < 10; i++) {        // Utilizaste un bucle for que itera 10 veces.      
+          if (i === 5) {                // Dentro del bucle, utilizaste una condición if para verificar si el índice i es igual a 5. 
+              continue;                 // Si es así, utilizaste continue para saltar esa iteración sin realizar la suma adicional.
+          }
+          unArray.push(num +=2);       // Si i no es igual a 5, añadiste el número aumentado en 2 al array unArray utilizando unArray.push(num += 2).
+      }
+      return unArray;                  //Finalmente, retornaste el array unArray que contiene los nuevos valores.
+  }
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
