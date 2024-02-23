@@ -5,12 +5,14 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
-}
+     return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+}    
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
    // [NOTA]: no debes reotrnar nada.
-   // Tu código:
+   // Tu código:                          //del parametro al cuerpo del texto
+   cb ();
 }
 
 function operacionMatematica(num1, num2, cb) {
@@ -18,6 +20,7 @@ function operacionMatematica(num1, num2, cb) {
    // El callback realiza una operación matemática, por lo que necesita de los dos números.
    // Retorna el resultado del callback pasándole como parámetros los números.
    // Tu código:
+   return cb (num1 + num2);             // del parametro al cuerpo del texto y le paso dos parámetros
 }
 
 function sumarArray(arrayOfNumbers, cb) {
@@ -26,6 +29,8 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+   resultado = arrayOfNumbers.reduce((contador, num) => contador + num);
+   cb (resultado);
 }
 
 function forEach(array, cb) {
@@ -33,6 +38,7 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
+   array.forEach (elemento => cb (elemento));
 }
 
 function map(array, cb) {
@@ -40,12 +46,22 @@ function map(array, cb) {
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
+   nuevoArr = []
+   resultado = array.map (elemento => {return cb (elemento)});
+
+   for (i=0 ; i < array.length; i++)
+   nuevoArr.push (resultado[i]);
+
+   return nuevoArr;
+
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+     comienzaConA = arrayOfStrings.filter (elemento => {return elemento [0] === "a"});
+     return comienzaConA;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
