@@ -125,13 +125,13 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
- //  let numComoString = num.toString();
-   //return numComoString[0] === '9';
-   if (num.toString()[0] === '9') {
-      return true;
-  } else {
-      return false;
-  }
+  let numComoString = num.toString();
+   return numComoString[0] === '9';
+//    if (num.toString()[0] === '9') {
+//       return true;
+//   } else {
+//       return false;
+//   }
 
 }
 
